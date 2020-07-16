@@ -1,5 +1,9 @@
 #!/bin/bash
-# GitHub;Email;Name;Usernames;Project1,Project2,..,ProjectN
+# GitHub;Email;Name;Username1,Username2,...,UsernameN;Project1,Project2,..,ProjectN
+# GitHub: required
+# Email, Name: can be empty
+# Usernames: can be empty, single value or list , separated
+# Projects: required at least one, can be a list , separated
 OFS=$IFS
 data=$(cat <<-EOM
 Alexey-N-Chernyshov;chernyshov@soramitsu.co.jp;Alexey Chernyshov;;hyperledger/iroha
@@ -40,28 +44,24 @@ chenette;;Anne Chenette;achenette;hyperledger/sawtooth,hyperledger/grid
 christo4ferris;chris.ferris@gmail.com;Chris Ferris;cbf;hyperledger/fabric
 cianx;;Cian Montgomery;;hyperledger/sawtooth
 compleatang;casey@monax.io;Casey Kuhlman;;hyperledger/burrow
-;;;;hyperledger/
-;;;;hyperledger/
-;;;;hyperledger/
-;;;;hyperledger/
+danintel;;Daniel Anderson;;hyperledger/avalon,hyperledger/sawtooth
+davececchi;;Dave Cecchi;cecchi;hyperledger/grid,hyperledger/transact
+dcmiddle;;Dan Middleton;Dan;hyperledger/avalon,hyperledger/sawtooth,hyperledger/grid,hyperledger/transact
+delventhalz;;Zac Delventhal;zac;hyperledger/sawtooth
+denali49;alaskadd@gmail.com;Chris Gabriel;cmgabriel;hyperledger/fabric
+denyeart;enyeart@us.ibm.com;Dave Enyeart;dave.enyeart;hyperledger/fabric
+desktophero;;Jason Walker;;hyperledger/grid
+dexhunter;dixingxu@gmail.com;Dixing Xu;;hyperledger/fabric
+dnewh;;Davey Newhall;newhall;hyperledger/transact
+dongmingh;dongming@ibm.com;Dongming Hwang;dongming;hyperledger/fabric
+dongwangdw;xdragon007@gmail.com;Dong Wang;wangdong;hyperledger/fabric
+dplumb94;;Darian Plumb;dplumb;hyperledger/sawtooth,hyperledger/grid
 ;;;;hyperledger/
 ;;;;hyperledger/
 ;;;;hyperledger/
 ;;;;hyperledger/
 ;;;;hyperledger/
 
-danintel,danintel"," avalon education-sawtooth-simple-supply sawtooth-website "," Daniel Anderson "," [danintel](https://github.com/danintel) "," @danintel
-davececchi,davececchi"," grid-contrib grid-rfcs grid-website grid transact-rfcs "," Dave Cecchi "," davececchi "," cecchi
-dcmiddle,dcmiddle"," avalon education-sawtooth-simple-supply grid-contrib grid-rfcs grid-website grid sawtooth-ansible sawtooth-contrib sawtooth-core sawtooth-devmode sawtooth-marketplace sawtooth-poet sawtooth-raft sawtooth-rfcs sawtooth-sabre sawtooth-sdk-cxx sawtooth-sdk-dotnet sawtooth-sdk-go sawtooth-sdk-java sawtooth-sdk-javascript sawtooth-sdk-python sawtooth-sdk-rust sawtooth-sdk-swift sawtooth-supply-chain sawtooth-website transact-rfcs "," Dan Middleton "," [dcmiddle](https://github.com/dcmiddle) "," @Dan
-delventhalz,delventhalz"," sawtooth-supply-chain "," Zac Delventhal "," delventhalz "," zac
-denali49,denali49"," fabric-amcl fabric-ca fabric homebrew-fabric "," Chris Gabriel "," [denali49,denali49"," cmgabriel "," <alaskadd@gmail.com>
-denyeart,denyeart"," fabric-amcl fabric-ca fabric-lib-go fabric-samples fabric homebrew-fabric "," Dave Enyeart "," [denyeart,denyeart"," dave.enyeart "," <enyeart@us.ibm.com>
-desktophero,desktophero"," grid-rfcs "," Jason Walker "," desktophero "," desktophero
-dexhunter,dexhunter"," fabric-sdk-py "," Dixing Xu "," dexhunter "," dexhunter "," dixingxu@gmail.com
-dnewh,dnewh"," transact-sdk-javascript "," Davey Newhall "," dnewh "," newhall
-dongmingh,dongmingh"," fabric-test "," Dongming Hwang "," dongmingh "," dongming "," dongming@ibm.com
-dongwangdw,dongwangdw"," fabric-sdk-py "," Dong Wang "," dongwangdw "," wangdong "," xdragon007@gmail.com
-dplumb94,dplumb94"," education-sawtooth-simple-supply grid-contrib grid-rfcs grid-website grid sawtooth-core sawtooth-devmode sawtooth-marketplace sawtooth-poet sawtooth-sdk-cxx sawtooth-sdk-dotnet sawtooth-sdk-go sawtooth-sdk-java sawtooth-sdk-javascript sawtooth-sdk-python sawtooth-sdk-rust sawtooth-sdk-swift sawtooth-seth sawtooth-supply-chain sawtooth-website "," Darian Plumb "," dplumb94 "," dplumb
 EOM
 )
 # hyperledger/aries
