@@ -72,10 +72,47 @@ haojun;;HaojunZhou;;hyperledger/caliper
 harrisob;beharrison@nc.rr.com;Bret Harrison;bretharrison;hyperledger/fabric
 heatherlp;heatherpollard0@gmail.com;Heather Pollard;heatherp;hyperledger/fabric
 hightall;hightallyht@gmail.com;Haitao Yue;;hyperledger/cello
+igor-egorov;igor@soramitsu.co.jp;Igor Egorov;;hyperledger/iroha
+iikirilov;;Ivaylo Kirilov;;hyperledger/besu
+ineffectualproperty;;Kelly Olson;kelly_;hyperledger/sawtooth
+jeevasang;sankarapandian@dtcc.com;Jeeva Sankarapandian;jeevas;hyperledger/explorer
+jframe;;Jason Frame;;hyperledger/besu
+joealewine;joe.alewine@ibm.com;Joe Alewine;;hyperledger/fabric
+joshuafernandes;;Joshua Fernandes;;hyperledger/besu
+jsmitchell;;James Mitchell;;hyperledger/sawtooth,hyperledger/grid,hyperledger/transact
+jt-nti;jamest@uk.ibm.com;James Taylor;jtonline;hyperledger/fabric
+jyellick;jyellick@us.ibm.com;Jason Yellick;;hyperledger/fabric
+kamilsa;kamil@soramitsu.co.jp;Kamil Salakhiev;;hyperledger/iroha
+l4l;evgenii@soramitsu.co.jp;Evgenii Mininbaev;;hyperledger/iroha
+laSinteZ;viacheslav@soramitsu.co.jp;Vyacheslav Bikbaev;;hyperledger/iroha
+lebdron;andrei@soramitsu.co.j;Andrei Lebedev;;hyperledger/iroha
+lehors;lehors@us.ibm.com;Arnaud Le Hors;;hyperledger/fabric
+ltseeley;;Logan Seeley;;hyperledger/sawtooth,hyperledger/transact
+lucassaldanha;;Lucas Saldanha;;hyperledger/besu
+luckychess;konstantin@soramitsu.co.jp;Konstantin Munichev;;hyperledger/iroha
+macfarla;;Sally MacFarlane;;hyperledger/besu
+mark-terry;;Mark Terry;m.terry;hyperledger/besu
+mastersingh24;gari.r.singh@gmail.com;Gari Singh;;hyperledger/fabric,hyperledger/transact
+matkt;;Karim Taam;;hyperledger/besu
+mbaxter;;Meredith Baxter;;hyperledger/besu
+mbwhite;whitemat@uk.ibm.com;Matthew B White;;hyperledger/fabric
+muralisrini;srinivasan.muralidharan99@gmail.com;Srinivasan Muralidharan;muralisr;hyperledger/fabric
+muratovv;fyodor@soramitsu.co.jp;Fyodor Muratov;;hyperledger/iroha
 ;;;;hyperledger/
 ;;;;hyperledger/
 ;;;;hyperledger/
 ;;;;hyperledger/
+;;;;hyperledger/
+;;;;hyperledger/
+;;;;hyperledger/
+;;;;hyperledger/
+;;;;hyperledger/
+;;;;hyperledger/
+;;;;hyperledger/
+;;;;hyperledger/
+;;;;hyperledger/
+
+
 EOM
 )
 # hyperledger/aries
@@ -145,32 +182,6 @@ IFS=$OFS
 # curl -s -XPOST -H 'Content-type: application/json' '(...)/sds-hyperledger-*/_search?size=10000' -d'{"query":{"wildcard":{"origin":{"value":"*smart-contracts*"}}}}' | jq '.hits.hits[]._index' | sort | uniq
 # curl -s -XPOST -H 'Content-type: application/json' (...)/_sql?format=csv -d"{\"query\":\"select origin, project from \\\"sds-hyperledger-*\\\" where origin like '%smart%' group by origin, project\"}"
 exit 0
-igor-egorov,igor-egorov"," iroha "," Igor Egorov "," @igor-egorov "," igor@soramitsu.co.jp "," Development, Android library
-iikirilov,iikirilov"," besu "," Ivaylo Kirilov "," iikirilov "," iikirilov
-ineffectualproperty,ineffectualproperty"," sawtooth-rfcs sawtooth-website "," Kelly Olson "," ineffectualproperty "," kelly_
-jeevasang,jeevasang"," blockchain-explorer "," Jeeva Sankarapandian "," jeevasang "," jeevas "," jsankarapandian@dtcc.com
-jframe,jframe"," besu "," Jason Frame "," jframe "," jframe
-joealewine,joealewine"," fabric-amcl fabric-ca fabric homebrew-fabric "," Joe Alewine "," [joealewine,joealewine"," joe-alewine "," <joe.alewine@ibm.com>
-joshuafernandes,joshuafernandes"," besu "," Joshua Fernandes "," joshuafernandes "," joshuafernandes
-jsmitchell,jsmitchell"," education-sawtooth-simple-supply grid-contrib grid-rfcs grid-website grid sawtooth-ansible sawtooth-contrib sawtooth-core sawtooth-devmode sawtooth-marketplace sawtooth-pbft sawtooth-poet sawtooth-raft sawtooth-rfcs sawtooth-sabre sawtooth-sdk-cxx sawtooth-sdk-dotnet sawtooth-sdk-go sawtooth-sdk-java sawtooth-sdk-javascript sawtooth-sdk-python sawtooth-sdk-rust sawtooth-sdk-swift sawtooth-supply-chain sawtooth-website transact-contrib transact-rfcs transact-sdk-go transact-sdk-javascript transact "," James Mitchell "," jsmitchell "," jsmitchell
-jt-nti,jt-nti"," fabric-chaincode-java fabric-chaincode-node fabric-contract-api-go "," James Taylor "," [jt-nti,jt-nti"," jtonline "," <jamest@uk.ibm.com>
-jyellick,jyellick"," fabric-amcl fabric-samples fabric homebrew-fabric "," Jason Yellick "," [jyellick,jyellick"," jyellick "," <jyellick@us.ibm.com>
-kamilsa,kamilsa"," iroha "," Kamil Salakhiev "," @kamilsa "," kamil@soramitsu.co.jp "," Development
-l4l,l4l"," iroha "," Evgenii Mininbaev "," @l4l "," evgenii@soramitsu.co.jp "," Security, Python library
-laSinteZ,laSinteZ"," iroha "," Vyacheslav Bikbaev "," @laSinteZ "," viacheslav@soramitsu.co.jp "," Documentation, NodeJS library
-lebdron,lebdron"," iroha "," Andrei Lebedev "," @lebdron "," andrei@soramitsu.co.jp "," Research
-lehors,lehors"," fabric-cli fabric-samples "," Arnaud Le Hors "," [lehors](https://github.com/lehors) "," lehors "," <lehors@us.ibm.com>
-ltseeley,ltseeley"," sawtooth-core sawtooth-devmode sawtooth-pbft sawtooth-poet sawtooth-raft sawtooth-sabre transact-contrib transact-sdk-go transact-sdk-javascript transact "," Logan Seeley "," ltseeley "," ltseeley
-lucassaldanha,lucassaldanha"," besu "," Lucas Saldanha "," lucassaldanha "," lucassaldanha
-luckychess,luckychess"," iroha "," Konstantin Munichev "," @luckychess "," konstantin@soramitsu.co.jp "," Security
-macfarla,macfarla"," besu "," Sally MacFarlane "," macfarla "," macfarla
-mark-terry,mark-terry"," besu "," Mark Terry "," mark-terry "," m.terry
-mastersingh24,mastersingh24"," fabric-amcl fabric-ca fabric-chaincode-evm fabric-chaincode-java fabric-lib-go fabric-samples fabric-sdk-go fabric-sdk-node fabric-test fabric homebrew-fabric transact-rfcs "," Gari Singh "," [mastersingh24,mastersingh24"," mastersingh24 "," <gari.r.singh@gmail.com>
-matkt,matkt"," besu "," Karim Taam "," matkt "," matkt
-mbaxter,mbaxter"," besu "," Meredith Baxter "," mbaxter "," mbaxter
-mbwhite,mbwhite"," fabric-chaincode-java fabric-chaincode-node fabric-samples "," Matthew B White "," [mbwhite,mbwhite"," mbwhite "," <whitemat@uk.ibm.com>
-muralisrini,muralisrini"," fabric-amcl fabric-chaincode-evm fabric homebrew-fabric "," Srinivasan Muralidharan "," [muralisrini,muralisrini"," muralisr "," <srinivasan.muralidharan99@gmail.com>
-muratovv,muratovv"," iroha "," Fyodor Muratov "," @muratovv "," fyodor@soramitsu.co.jp "," Architecture, Java library, QA
 neewy,neewy"," iroha "," Nikolai Iushkevich "," @neewy "," n.yushkevich@hotmail.com "," Development
 nekia,nekia"," blockchain-explorer "," Atsushi Neki "," nekia "," nekia "," atsushin@fast.au.fujitsu.com
 nfrunza,nfrunza"," blockchain-explorer "," Nik Frunza "," nfrunza "," nfrunza "," nfrunza@gmail.com
