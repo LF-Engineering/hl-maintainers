@@ -10,8 +10,42 @@ Kelly-Cooper;kellycooper.2ds@gmail.com;Kelly Cooper;KellyCooper;hyperledger/besu
 LordGoodman;jiahaochen1993@gmail.com;Luke Chen;luke_chen;hyperledger/cello
 MHBauer;mbauer@us.ibm.com;Morgan Bauer;;hyperledger/fabric
 MadelineMurray;;Madeline Murray;madelinemurray;hyperledger/besu
+MattP007;;Matt Perron;mattp;hyperledger/grid
+NicolasMassart;;Nicolas Massart;;hyperledger/besu
+RatanRSur;;Rai Sur;ratanraisur;hyperledger/besu
+RyanLassigBanks;;Ryan Banks;RyanBanks;hyperledger/grid,hyperledger/sawtooth
+Solonets;ssolonets@gmail.com;Sergei Solonets;;hyperledger/iroha
+;;;;hyperledger/
+;;;;hyperledger/
+;;;;hyperledger/
+;;;;hyperledger/
+;;;;hyperledger/
+;;;;hyperledger/
+;;;;hyperledger/
+;;;;hyperledger/
+;;;;hyperledger/
+;;;;hyperledger/
+;;;;hyperledger/
 EOM
 )
+# hyperledger/aries
+# hyperledger/avalon
+# hyperledger/besu
+# hyperledger/burrow
+# hyperledger/cactus
+# hyperledger/caliper
+# hyperledger/cello
+# hyperledger/explorer
+# hyperledger/fabric
+# hyperledger/grid
+# hyperledger/hyperledger-all
+# hyperledger/hyperledger-dlt
+# hyperledger/indy
+# hyperledger/iroha
+# hyperledger/quilt
+# hyperledger/sawtooth
+# hyperledger/transact
+# hyperledger/ursa
 IFS=$'\n'
 for row in $data
 do
@@ -24,7 +58,8 @@ do
   slugs=${arr[4]}
   IFS=','
   slugs=(${slugs})
-  q="select * from enrollments where (uuid in (select uuid from identities where source = 'github' and username in ('${gh}'))"
+  root="select * from enrollments"
+  q="where (uuid in (select uuid from identities where source = 'github' and username in ('${gh}'))"
   if [ ! -z "${email}" ]
   then
     q="${q} or uuid in (select uuid from identities where email in ('${email}'))"
@@ -53,18 +88,13 @@ do
   done
   q="${q::-1});"
   #echo "select '${gh}', '${email}', '${name}', '${slugs}';"
-  echo "$q"
+  echo "$root $q"
 done
 IFS=$OFS
 # select * from enrollments where uuid in (select uuid from identities where source = 'github' and username in ('Alexey-N-Chernyshov')) or uuid in (select uuid from identities where email in ('chernyshov@soramitsu.co.jp')) and project_slug in ('hyperledger/iroha');
 # curl -s -XPOST -H 'Content-type: application/json' '(...)/sds-hyperledger-*/_search?size=10000' -d'{"query":{"wildcard":{"origin":{"value":"*smart-contracts*"}}}}' | jq '.hits.hits[]._index' | sort | uniq
 # curl -s -XPOST -H 'Content-type: application/json' (...)/_sql?format=csv -d"{\"query\":\"select origin, project from \\\"sds-hyperledger-*\\\" where origin like '%smart%' group by origin, project\"}"
 exit 0
-MattP007,MattP007"," grid-rfcs "," Matt Perron "," MattP007 "," mattp
-NicolasMassart,NicolasMassart"," besu-docs besu "," Nicolas Massart "," NicolasMassart "," NicolasMassart
-RatanRSur,RatanRSur"," besu "," Rai Sur "," RatanRSur "," ratanraisur
-RyanLassigBanks,RyanLassigBanks"," grid-contrib grid-website grid sawtooth-sabre sawtooth-supply-chain "," Ryan Banks "," RyanLassigBanks "," RyanBanks
-Solonets,Solonets"," iroha "," Sergei Solonets "," @Solonets "," ssolonets@gmail.com "," Development
 TomBarnes,TomBarnes"," avalon sawtooth-rfcs "," Thomas J Barnes "," [TomBarnes](https://github.com/TomBarnes) "," @TomBarnes
 abdelhamidbakhta,abdelhamidbakhta"," besu "," Abdel Bakhta "," abdelhamidbakhta "," abdelhamidbakhta
 adamk1230,adamk1230"," blockchain-explorer "," Adam Kwan "," adamk1230 "," adamk1230 "," adamk1230@gmail.com
