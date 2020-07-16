@@ -177,7 +177,8 @@ do
   slugs=${arr[4]}
   IFS=','
   slugs=(${slugs})
-  root="select * from enrollments"
+  #root="select * from enrollments"
+  root="update enrollments set role = 'Maintainer'"
   q="where (uuid in (select uuid from identities where source = 'github' and username in ('${gh}'))"
   if [ ! -z "${email}" ]
   then
