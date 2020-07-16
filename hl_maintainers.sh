@@ -35,6 +35,11 @@ bgravenorst;;Byron Gravenorst;;hyperledger/besu
 blt5037;Brett.T.Logan@ibm.com;Brett Logan;brett;hyperledger/fabric
 boydjohnson;;Boyd Johnson;;hyperledger/sawtooth
 bstasyszyn;bob.stasyszyn@securekey.com;Bob Stasyszyn;;hyperledger/fabric
+c0rwin;bartem@il.ibm.com;Artem Barger;;hyperledger/fabric
+chenette;;Anne Chenette;achenette;hyperledger/sawtooth,hyperledger/grid
+christo4ferris;chris.ferris@gmail.com;Chris Ferris;cbf;hyperledger/fabric
+cianx;;Cian Montgomery;;hyperledger/sawtooth
+compleatang;casey@monax.io;Casey Kuhlman;;hyperledger/burrow
 ;;;;hyperledger/
 ;;;;hyperledger/
 ;;;;hyperledger/
@@ -44,11 +49,19 @@ bstasyszyn;bob.stasyszyn@securekey.com;Bob Stasyszyn;;hyperledger/fabric
 ;;;;hyperledger/
 ;;;;hyperledger/
 ;;;;hyperledger/
-;;;;hyperledger/
-;;;;hyperledger/
-;;;;hyperledger/
-;;;;hyperledger/
-;;;;hyperledger/
+
+danintel,danintel"," avalon education-sawtooth-simple-supply sawtooth-website "," Daniel Anderson "," [danintel](https://github.com/danintel) "," @danintel
+davececchi,davececchi"," grid-contrib grid-rfcs grid-website grid transact-rfcs "," Dave Cecchi "," davececchi "," cecchi
+dcmiddle,dcmiddle"," avalon education-sawtooth-simple-supply grid-contrib grid-rfcs grid-website grid sawtooth-ansible sawtooth-contrib sawtooth-core sawtooth-devmode sawtooth-marketplace sawtooth-poet sawtooth-raft sawtooth-rfcs sawtooth-sabre sawtooth-sdk-cxx sawtooth-sdk-dotnet sawtooth-sdk-go sawtooth-sdk-java sawtooth-sdk-javascript sawtooth-sdk-python sawtooth-sdk-rust sawtooth-sdk-swift sawtooth-supply-chain sawtooth-website transact-rfcs "," Dan Middleton "," [dcmiddle](https://github.com/dcmiddle) "," @Dan
+delventhalz,delventhalz"," sawtooth-supply-chain "," Zac Delventhal "," delventhalz "," zac
+denali49,denali49"," fabric-amcl fabric-ca fabric homebrew-fabric "," Chris Gabriel "," [denali49,denali49"," cmgabriel "," <alaskadd@gmail.com>
+denyeart,denyeart"," fabric-amcl fabric-ca fabric-lib-go fabric-samples fabric homebrew-fabric "," Dave Enyeart "," [denyeart,denyeart"," dave.enyeart "," <enyeart@us.ibm.com>
+desktophero,desktophero"," grid-rfcs "," Jason Walker "," desktophero "," desktophero
+dexhunter,dexhunter"," fabric-sdk-py "," Dixing Xu "," dexhunter "," dexhunter "," dixingxu@gmail.com
+dnewh,dnewh"," transact-sdk-javascript "," Davey Newhall "," dnewh "," newhall
+dongmingh,dongmingh"," fabric-test "," Dongming Hwang "," dongmingh "," dongming "," dongming@ibm.com
+dongwangdw,dongwangdw"," fabric-sdk-py "," Dong Wang "," dongwangdw "," wangdong "," xdragon007@gmail.com
+dplumb94,dplumb94"," education-sawtooth-simple-supply grid-contrib grid-rfcs grid-website grid sawtooth-core sawtooth-devmode sawtooth-marketplace sawtooth-poet sawtooth-sdk-cxx sawtooth-sdk-dotnet sawtooth-sdk-go sawtooth-sdk-java sawtooth-sdk-javascript sawtooth-sdk-python sawtooth-sdk-rust sawtooth-sdk-swift sawtooth-seth sawtooth-supply-chain sawtooth-website "," Darian Plumb "," dplumb94 "," dplumb
 EOM
 )
 # hyperledger/aries
@@ -118,23 +131,6 @@ IFS=$OFS
 # curl -s -XPOST -H 'Content-type: application/json' '(...)/sds-hyperledger-*/_search?size=10000' -d'{"query":{"wildcard":{"origin":{"value":"*smart-contracts*"}}}}' | jq '.hits.hits[]._index' | sort | uniq
 # curl -s -XPOST -H 'Content-type: application/json' (...)/_sql?format=csv -d"{\"query\":\"select origin, project from \\\"sds-hyperledger-*\\\" where origin like '%smart%' group by origin, project\"}"
 exit 0
-c0rwin,c0rwin"," fabric-amcl fabric-chaincode-java fabric homebrew-fabric "," Artem Barger "," [c0rwin,c0rwin"," c0rwin "," <bartem@il.ibm.com>
-chenette,chenette"," education-sawtooth-simple-supply grid-contrib grid-website grid sawtooth-core sawtooth-devmode sawtooth-pbft sawtooth-poet sawtooth-sdk-cxx sawtooth-sdk-dotnet sawtooth-sdk-go sawtooth-sdk-java sawtooth-sdk-javascript sawtooth-sdk-python sawtooth-sdk-rust sawtooth-supply-chain sawtooth-website "," Anne Chenette "," chenette "," achenette
-christo4ferris,christo4ferris"," fabric-amcl fabric-chaincode-evm fabric-lib-go fabric-samples fabric-sdk-node fabric homebrew-fabric "," Chris Ferris "," [christo4ferris,christo4ferris"," cbf "," <chris.ferris@gmail.com>
-cianx,cianx"," sawtooth-core sawtooth-devmode sawtooth-poet sawtooth-sdk-cxx sawtooth-sdk-dotnet sawtooth-sdk-go sawtooth-sdk-java sawtooth-sdk-javascript sawtooth-sdk-python sawtooth-sdk-rust "," Cian Montgomery "," cianx "," cianx
-compleatang,compleatang"," burrow "," Casey Kuhlman "," compleatang "," <casey@monax.io>
-danintel,danintel"," avalon education-sawtooth-simple-supply sawtooth-website "," Daniel Anderson "," [danintel](https://github.com/danintel) "," @danintel
-davececchi,davececchi"," grid-contrib grid-rfcs grid-website grid transact-rfcs "," Dave Cecchi "," davececchi "," cecchi
-dcmiddle,dcmiddle"," avalon education-sawtooth-simple-supply grid-contrib grid-rfcs grid-website grid sawtooth-ansible sawtooth-contrib sawtooth-core sawtooth-devmode sawtooth-marketplace sawtooth-poet sawtooth-raft sawtooth-rfcs sawtooth-sabre sawtooth-sdk-cxx sawtooth-sdk-dotnet sawtooth-sdk-go sawtooth-sdk-java sawtooth-sdk-javascript sawtooth-sdk-python sawtooth-sdk-rust sawtooth-sdk-swift sawtooth-supply-chain sawtooth-website transact-rfcs "," Dan Middleton "," [dcmiddle](https://github.com/dcmiddle) "," @Dan
-delventhalz,delventhalz"," sawtooth-supply-chain "," Zac Delventhal "," delventhalz "," zac
-denali49,denali49"," fabric-amcl fabric-ca fabric homebrew-fabric "," Chris Gabriel "," [denali49,denali49"," cmgabriel "," <alaskadd@gmail.com>
-denyeart,denyeart"," fabric-amcl fabric-ca fabric-lib-go fabric-samples fabric homebrew-fabric "," Dave Enyeart "," [denyeart,denyeart"," dave.enyeart "," <enyeart@us.ibm.com>
-desktophero,desktophero"," grid-rfcs "," Jason Walker "," desktophero "," desktophero
-dexhunter,dexhunter"," fabric-sdk-py "," Dixing Xu "," dexhunter "," dexhunter "," dixingxu@gmail.com
-dnewh,dnewh"," transact-sdk-javascript "," Davey Newhall "," dnewh "," newhall
-dongmingh,dongmingh"," fabric-test "," Dongming Hwang "," dongmingh "," dongming "," dongming@ibm.com
-dongwangdw,dongwangdw"," fabric-sdk-py "," Dong Wang "," dongwangdw "," wangdong "," xdragon007@gmail.com
-dplumb94,dplumb94"," education-sawtooth-simple-supply grid-contrib grid-rfcs grid-website grid sawtooth-core sawtooth-devmode sawtooth-marketplace sawtooth-poet sawtooth-sdk-cxx sawtooth-sdk-dotnet sawtooth-sdk-go sawtooth-sdk-java sawtooth-sdk-javascript sawtooth-sdk-python sawtooth-sdk-rust sawtooth-sdk-swift sawtooth-seth sawtooth-supply-chain sawtooth-website "," Darian Plumb "," dplumb94 "," dplumb
 edwardmack,edwardmack"," besu "," Edward Mack "," edwardmack "," mackcom
 edwardsm26,edwardsm26"," blockchain-explorer "," Mekia Edwards "," edwardsm26 "," edwardsm26 "," dev.edwardsm@gmail.com
 eloaverona,eloaverona"," grid sawtooth-sdk-swift transact-contrib transact-sdk-go transact-sdk-javascript transact
