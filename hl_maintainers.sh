@@ -25,11 +25,16 @@ aklenik;;Attila Klenik;klenik;hyperledger/caliper
 alikic;aleksandar.likic@securekey.com;Aleksandar Likic;;hyperledger/fabric
 aludvik;;Adam Ludvik;adamludvik;hyperledger/sawtooth
 andrew-coleman;andrew_coleman@uk.ibm.com;Andrew Coleman;;hyperledger/fabric
-;;;;hyperledger/
-;;;;hyperledger/
-;;;;hyperledger/
-;;;;hyperledger/
-;;;;hyperledger/
+arsulegai;;Arun S M;;hyperledger/sawtooth
+atoulme;;Antoine Toulme;;hyperledger/besu
+auntmelmel;;Melanie Nuce;MelanieNuce;hyperledger/grid
+awjh-ibm;andrew.hurt1@ibm.com;Andrew Hurt;;hyperledger/fabric
+bakhtin;a@bakhtin.net;Artyom Bakhtin;;hyperledger/iroha
+bestbeforetoday;Mark.S.Lewis@outlook.com;Mark Lewis;;hyperledger/fabric
+bgravenorst;;Byron Gravenorst;;hyperledger/besu
+blt5037;Brett.T.Logan@ibm.com;Brett Logan;brett;hyperledger/fabric
+boydjohnson;;Boyd Johnson;;hyperledger/sawtooth
+bstasyszyn;bob.stasyszyn@securekey.com;Bob Stasyszyn;;hyperledger/fabric
 ;;;;hyperledger/
 ;;;;hyperledger/
 ;;;;hyperledger/
@@ -113,16 +118,6 @@ IFS=$OFS
 # curl -s -XPOST -H 'Content-type: application/json' '(...)/sds-hyperledger-*/_search?size=10000' -d'{"query":{"wildcard":{"origin":{"value":"*smart-contracts*"}}}}' | jq '.hits.hits[]._index' | sort | uniq
 # curl -s -XPOST -H 'Content-type: application/json' (...)/_sql?format=csv -d"{\"query\":\"select origin, project from \\\"sds-hyperledger-*\\\" where origin like '%smart%' group by origin, project\"}"
 exit 0
-arsulegai,arsulegai"," sawtooth-seth "," Arun S M "," arsulegai "," arsulegai
-atoulme,atoulme"," besu "," Antoine Toulme "," atoulme "," atoulme
-auntmelmel,auntmelmel"," grid-rfcs "," Melanie Nuce "," auntmelmel "," MelanieNuce
-awjh-ibm,awjh-ibm"," fabric-chaincode-node fabric-chaincode-node fabric-contract-api-go "," Andrew Hurt "," [awjh-ibm,awjh-ibm"," awjh-ibm "," <andrew.hurt1@ibm.com>
-bakhtin,bakhtin"," iroha "," Artyom Bakhtin "," @bakhtin "," a@bakhtin.net "," Ansible, Jenkins, artifacts
-bestbeforetoday,bestbeforetoday"," fabric-gateway-java fabric-sdk-java fabric-sdk-java fabric-sdk-node "," Mark Lewis "," bestbeforetoday"," Mark.S.Lewis@outlook.com
-bgravenorst,bgravenorst"," besu-docs besu "," Byron Gravenorst "," bgravenorst "," bgravenorst
-blt5037,blt5037"," fabric-test "," Brett Logan "," blt5037 "," brett "," Brett.T.Logan@ibm.com
-boydjohnson,boydjohnson"," sawtooth-marketplace sawtooth-supply-chain "," Boyd Johnson "," boydjohnson "," boydjohnson
-bstasyszyn,bstasyszyn"," fabric-sdk-go "," Bob Stasyszyn "," bstasyszyn "," bob.stasyszyn@securekey.com
 c0rwin,c0rwin"," fabric-amcl fabric-chaincode-java fabric homebrew-fabric "," Artem Barger "," [c0rwin,c0rwin"," c0rwin "," <bartem@il.ibm.com>
 chenette,chenette"," education-sawtooth-simple-supply grid-contrib grid-website grid sawtooth-core sawtooth-devmode sawtooth-pbft sawtooth-poet sawtooth-sdk-cxx sawtooth-sdk-dotnet sawtooth-sdk-go sawtooth-sdk-java sawtooth-sdk-javascript sawtooth-sdk-python sawtooth-sdk-rust sawtooth-supply-chain sawtooth-website "," Anne Chenette "," chenette "," achenette
 christo4ferris,christo4ferris"," fabric-amcl fabric-chaincode-evm fabric-lib-go fabric-samples fabric-sdk-node fabric homebrew-fabric "," Chris Ferris "," [christo4ferris,christo4ferris"," cbf "," <chris.ferris@gmail.com>
