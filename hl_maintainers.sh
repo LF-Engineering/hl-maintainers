@@ -56,12 +56,26 @@ dnewh;;Davey Newhall;newhall;hyperledger/transact
 dongmingh;dongming@ibm.com;Dongming Hwang;dongming;hyperledger/fabric
 dongwangdw;xdragon007@gmail.com;Dong Wang;wangdong;hyperledger/fabric
 dplumb94;;Darian Plumb;dplumb;hyperledger/sawtooth,hyperledger/grid
+edwardmack;;dward Mack;mackcom;hyperledger/besu
+edwardsm26;dev.edwardsm@gmail.com;Mekia Edwards;;hyperledger/explorer
+eloaverona;;;;hyperledger/grid,hyperledger/sawtooth,hyperledger/transact
+feihujiang;;FeihuJiang;FlyingTiger;hyperledger/caliper
+fqutishat;firas.qutishat@securekey.com;Firas.Qutishat;;hyperledger/
+genasmorgan;;Gena Morgan;Gena;hyperledger/grid
+gennadylaventman;gennady@il.ibm.com;Gennady Laventman;gennadyl;hyperledger/fabric
+grantnoble;;Grant Noble;;hyperledger/besu
+gregdhill;greg.hill@monax.io;Greg Hill;;hyperledger/burrow
+grimadas;bulat@soramitsu.co.jp;Bulat Nasrulin;;hyperledger/iroha
+grkvlt;;Andrew Donald Kennedy;;hyperledger/sawtooth
+guoger;guojiannan1101@gmail.com;Jay Guo;;hyperledger/fabric
+haojun;;HaojunZhou;;hyperledger/caliper
+harrisob;beharrison@nc.rr.com;Bret Harrison;bretharrison;hyperledger/fabric
+heatherlp;heatherpollard0@gmail.com;Heather Pollard;heatherp;hyperledger/fabric
+hightall;hightallyht@gmail.com;Haitao Yue;;hyperledger/cello
 ;;;;hyperledger/
 ;;;;hyperledger/
 ;;;;hyperledger/
 ;;;;hyperledger/
-;;;;hyperledger/
-
 EOM
 )
 # hyperledger/aries
@@ -131,22 +145,6 @@ IFS=$OFS
 # curl -s -XPOST -H 'Content-type: application/json' '(...)/sds-hyperledger-*/_search?size=10000' -d'{"query":{"wildcard":{"origin":{"value":"*smart-contracts*"}}}}' | jq '.hits.hits[]._index' | sort | uniq
 # curl -s -XPOST -H 'Content-type: application/json' (...)/_sql?format=csv -d"{\"query\":\"select origin, project from \\\"sds-hyperledger-*\\\" where origin like '%smart%' group by origin, project\"}"
 exit 0
-edwardmack,edwardmack"," besu "," Edward Mack "," edwardmack "," mackcom
-edwardsm26,edwardsm26"," blockchain-explorer "," Mekia Edwards "," edwardsm26 "," edwardsm26 "," dev.edwardsm@gmail.com
-eloaverona,eloaverona"," grid sawtooth-sdk-swift transact-contrib transact-sdk-go transact-sdk-javascript transact
-feihujiang,feihujiang"," caliper "," FeihuJiang "," feihujiang "," FlyingTiger
-fqutishat,fqutishat"," fabric-sdk-go "," Firas.Qutishat "," fqutishat "," firas.qutishat@securekey.com
-genasmorgan,genasmorgan"," grid-rfcs "," Gena Morgan "," genasmorgan "," Gena
-gennadylaventman,gennadylaventman"," fabric-chaincode-java "," Gennady Laventman "," gennadylaventman "," gennadyl "," gennady@il.ibm.com
-grantnoble,grantnoble"," besu-docs "," Grant Noble "," grantnoble "," grantnoble
-gregdhill,gregdhill"," burrow "," Greg Hill "," gregdhill "," <greg.hill@monax.io>
-grimadas,grimadas"," iroha "," Bulat Nasrulin "," @grimadas "," bulat@soramitsu.co.jp "," Development
-grkvlt,grkvlt"," sawtooth-seth "," Andrew Donald Kennedy "," grkvlt "," grkvlt
-guoger,guoger"," fabric-amcl fabric-chaincode-evm fabric homebrew-fabric "," Jay Guo "," [guoger,guoger"," guoger "," <guojiannan1101@gmail.com>
-haojun,haojun"," caliper "," HaojunZhou "," haojun "," haojun
-harrisob,harrisob"," fabric-chaincode-node fabric-samples fabric-sdk-node "," Bret Harrison "," [harrisob,harrisob"," bretharrison "," <beharrison@nc.rr.com>
-heatherlp,heatherlp"," fabric-sdk-node "," Heather Pollard "," heatherlp "," heatherp "," heatherpollard0@gmail.com
-hightall,hightall"," cello-analytics cello "," Haitao Yue "," hightall "," hightall "," hightallyht@gmail.com
 igor-egorov,igor-egorov"," iroha "," Igor Egorov "," @igor-egorov "," igor@soramitsu.co.jp "," Development, Android library
 iikirilov,iikirilov"," besu "," Ivaylo Kirilov "," iikirilov "," iikirilov
 ineffectualproperty,ineffectualproperty"," sawtooth-rfcs sawtooth-website "," Kelly Olson "," ineffectualproperty "," kelly_
