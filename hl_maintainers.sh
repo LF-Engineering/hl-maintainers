@@ -1,15 +1,15 @@
 #!/bin/bash
-# GitHub;Email;Name;Project1,Project2,..,ProjectN
+# GitHub;Email;Name;Usernames;Project1,Project2,..,ProjectN
 OFS=$IFS
 data=$(cat <<-EOM
-Alexey-N-Chernyshov;chernyshov@soramitsu.co.jp;Alexey Chernyshov;hyperledger/iroha
-CjHare;;Chris Hare;hyperledger/besu
-EdJoJob;;Edward Evans;hyperledger/besu
-GuillaumeCisco;guillaumecisco@gmail.com;Guillaume Cisco;hyperledger/fabric
-Kelly-Cooper;kellycooper.2ds@gmail.com;Kelly Cooper;hyperledger/besu,hyperledger/iroha
-LordGoodman;jiahaochen1993@gmail.com;Luke Chen;hyperledger/cello
-MHBauer;mbauer@us.ibm.com;Morgan Bauer;hyperledger/fabric
-MadelineMurray;;Madeline Murray;hyperledger/besu
+Alexey-N-Chernyshov;chernyshov@soramitsu.co.jp;Alexey Chernyshov;;hyperledger/iroha
+CjHare;;Chris Hare;;hyperledger/besu
+EdJoJob;;Edward Evans;;hyperledger/besu
+GuillaumeCisco;guillaumecisco@gmail.com;Guillaume Cisco;;hyperledger/fabric
+Kelly-Cooper;kellycooper.2ds@gmail.com;Kelly Cooper;KellyCooper;hyperledger/besu,hyperledger/iroha
+LordGoodman;jiahaochen1993@gmail.com;Luke Chen;luke_chen;hyperledger/cello
+MHBauer;mbauer@us.ibm.com;Morgan Bauer;;hyperledger/fabric
+MadelineMurray;;Madeline Murray;madelinemurray;hyperledger/besu
 EOM
 )
 IFS=$'\n'
@@ -20,7 +20,8 @@ do
   gh=${arr[0]}
   email=${arr[1]}
   name=${arr[2]}
-  slugs=${arr[3]}
+  usernames=${arr[3]}
+  slugs=${arr[4]}
   IFS=','
   slugs=(${slugs})
   q="select * from enrollments where (uuid in (select uuid from identities where source = 'github' and username in ('${gh}'))"
@@ -31,6 +32,19 @@ do
   if [ ! -z "${name}" ]
   then
     q="${q} or uuid in (select uuid from identities where name in ('${name}') having count(distinct uuid) = 1)"
+  fi
+  if [ ! -z "${usernames}" ]
+  then
+    usernames=(${usernames})
+    for username in "${usernames[@]}"
+    do
+      if [ -z "${name}" ]
+      then
+        q="${q} or uuid in (select uuid from identities where username in ('${username}') having count(distinct uuid) = 1)"
+      else
+        q="${q} or uuid in (select uuid from identities where username in ('${username}') and name in ('${name}'))"
+      fi
+    done
   fi
   q="${q}) and project_slug in ("
   for slug in "${slugs[@]}"
