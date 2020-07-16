@@ -4,6 +4,24 @@
 # Email, Name: can be empty
 # Usernames: can be empty, single value or list , separated
 # Projects: required at least one, can be a list , separated
+# hyperledger/aries
+# hyperledger/avalon
+# hyperledger/besu
+# hyperledger/burrow
+# hyperledger/cactus
+# hyperledger/caliper
+# hyperledger/cello
+# hyperledger/explorer
+# hyperledger/fabric
+# hyperledger/grid
+# hyperledger/hyperledger-all
+# hyperledger/hyperledger-dlt
+# hyperledger/indy
+# hyperledger/iroha
+# hyperledger/quilt
+# hyperledger/sawtooth
+# hyperledger/transact
+# hyperledger/ursa
 OFS=$IFS
 data=$(cat <<-EOM
 Alexey-N-Chernyshov;chernyshov@soramitsu.co.jp;Alexey Chernyshov;;hyperledger/iroha
@@ -104,7 +122,7 @@ nfrunza;nfrunza@gmail.com;Nik Frunza;;hyperledger/explorer
 nickaleks;alekseev@soramitsu.co.jp;Nikita Alekseev;;hyperledger/iroha
 nikhil550;nikhilg550@gmail.com;Nikhil Gupta;nikhilgupta;hyperledger/fabric
 nklincoln;;Nick Lincoln;nkl199;hyperledger/caliper
-odowdaibm;a_o-dowd@uk.ibm.com;Anthony O'Dowd;;hyperledger/fabric
+odowdaibm;a_o-dowd@uk.ibm.com;Anthony O\'Dowd;;hyperledger/fabric
 pamandrejko;pama@ibm.com;Pam Andrejko;;hyperledger/fabric
 peterschwarz;;Peter Schwarz;pschwarz;hyperledger/sawtooth,hyperledger/grid,hyperledger/transact
 phymbert;pierrick.hymbert@gmail.com;Pierrick Hymbert;;hyperledger/burrow
@@ -115,30 +133,38 @@ rbuysse;;Ryan Beck-Buysse;;hyperledger/grid,hyperledger/sawtooth,hyperledger/tra
 rojotek;;Rob Dawson;RobDawson;hyperledger/besu
 ryanlassigbanks;;Ryan Banks;robinbanks;hyperledger/transact
 ryuo88;okada@soramitsu.co.jp;Ryu Okada;;hyperledger/iroha
-;;;;hyperledger/
-;;;;hyperledger/
-;;;;hyperledger/
-
+saad-karim;skarim@us.ibm.com;Saad Karim;skarim;hyperledger/fabric
+scottz64;scottz@us.ibm.com;Scott Zwierzynski;scottz;hyperledger/fabric
+seanyoung;sean@mess.org;Sean Young;;hyperledger/burrow
+sgregglives;;Steven Gregg;sagregg;hyperledger/besu
+shannynalayna;;;;hyperledger/grid,hyperledger/sawtooth,hyperledger/transact
+shemnon;;Danno Ferrin;;hyperledger/besu
+silasdavis;silas@monax.io;Silas Davis;;hyperledger/burrow
+smithbk;bksmith@us.ibm.com;Keith Smith;;hyperledger/fabric
+sofiter;sophia.terzi@gmail.com;Sofia Terzi;st;hyperledger/besu
+sstone1;sstone1@uk.ibm.com;Simon Stone;;hyperledger/fabric
+stinger112;stinger112@gmail.com;Arseniy Fokin;;hyperledger/iroha
+suryalnvs;slanka@us.ibm.com;Surya Lanka;slanka;hyperledger/fabric
+swetharepakula;srepaku@us.ibm.com;Swetha Repakula;swetha;hyperledger/fabric
+sykesm;sykesmat@us.ibm.com;Matthew Sykes;;hyperledger/fabric
+takemiyamakoto;takemiya@soramitsu.co.jp;Makoto Takemiya;;hyperledger/iroha
+timbeiko;;Tim Beiko;;hyperledger/besu
+tmarkovski;;Tomislav Markovski;tomislav;hyperledger/sawtooth
+tongli;litong01@us.ibm.com;Tong Li;;hyperledger/cello
+troyronda;troy@troyronda.com;Troy Ronda;;hyperledger/fabric
+tyvision;tyukushin@soramitsu.co.jp;Anatoly Tyukushin;;hyperledger/iroha
+umadiraju;umapathi.madiraju@gmail.com;Umapathi Madiraju;umadiraj;hyperledger/explorer
+usmansaleem;;Usman Saleem;;hyperledger/besu
+vaporos;;Shawn Amundson;amundson;hyperledger/sawtooth,hyperledger/grid,hyperledger/transact
+vchinoy-da;vinitachinoy@yahoo.com;Vinita Chinoy;vchinoy;hyperledger/explorer
+victordrobny;drobny@soramitsu.co.jp;Victor Drobny;;hyperledger/iroha
+x3medima17;savva@soramitsu.co.jp;Dumitru Savva;;hyperledger/iroha
+xspeedcruiser;atheesh.ceg@gmail.com;Satheesh Kathamuthu;satheeshk;hyperledger/explorer
+yannoban;ban.yanno@nbc.org.kh;Yanno Ban;;hyperledger/iroha
+yeasy;yangbaohua@gmail.com;Baohua Yang;baohua;hyperledger/cello
+zhaochy1990;zhaochy_2015@hotmail.com;Chaoyi Zhao;zhaochy;hyperledger/fabric
 EOM
 )
-# hyperledger/aries
-# hyperledger/avalon
-# hyperledger/besu
-# hyperledger/burrow
-# hyperledger/cactus
-# hyperledger/caliper
-# hyperledger/cello
-# hyperledger/explorer
-# hyperledger/fabric
-# hyperledger/grid
-# hyperledger/hyperledger-all
-# hyperledger/hyperledger-dlt
-# hyperledger/indy
-# hyperledger/iroha
-# hyperledger/quilt
-# hyperledger/sawtooth
-# hyperledger/transact
-# hyperledger/ursa
 IFS=$'\n'
 for row in $data
 do
@@ -187,34 +213,3 @@ IFS=$OFS
 # select * from enrollments where uuid in (select uuid from identities where source = 'github' and username in ('Alexey-N-Chernyshov')) or uuid in (select uuid from identities where email in ('chernyshov@soramitsu.co.jp')) and project_slug in ('hyperledger/iroha');
 # curl -s -XPOST -H 'Content-type: application/json' '(...)/sds-hyperledger-*/_search?size=10000' -d'{"query":{"wildcard":{"origin":{"value":"*smart-contracts*"}}}}' | jq '.hits.hits[]._index' | sort | uniq
 # curl -s -XPOST -H 'Content-type: application/json' (...)/_sql?format=csv -d"{\"query\":\"select origin, project from \\\"sds-hyperledger-*\\\" where origin like '%smart%' group by origin, project\"}"
-exit 0
-saad-karim,saad-karim"," fabric-ca "," Saad Karim "," saad-karim "," skarim "," <skarim@us.ibm.com>
-scottz64,scottz64"," fabric-test "," Scott Zwierzynski "," scottz64 "," scottz "," scottz@us.ibm.com
-seanyoung,seanyoung"," burrow "," Sean Young "," seanyoung "," <sean@mess.org>
-sgregglives,sgregglives"," besu-docs "," Steven Gregg "," sgregglives "," sagregg
-shannynalayna,shannynalayna"," grid sawtooth-sdk-swift transact-contrib transact-sdk-go transact-sdk-javascript transact
-shemnon,shemnon"," besu "," Danno Ferrin "," shemnon "," shemnon
-silasdavis,silasdavis"," burrow "," Silas Davis "," silasdavis "," <silas@monax.io>
-smithbk,smithbk"," fabric-amcl fabric-sdk-node fabric homebrew-fabric "," Keith Smith "," smithbk "," smithbk "," bksmith@us.ibm.com
-sofiter,sofiter"," smart-contracts-wg "," Sofia Terzi "," sofiter "," st "," sophia.terzi@gmail.com
-sstone1,sstone1"," fabric-samples "," Simon Stone "," sstone1 "," sstone1 "," sstone1@uk.ibm.com
-stinger112,stinger112"," iroha "," Arseniy Fokin "," @stinger112 "," stinger112@gmail.com "," NodeJS library
-suryalnvs,suryalnvs"," fabric-test "," Surya Lanka "," suryalnvs "," slanka "," slanka@us.ibm.com
-swetharepakula,swetharepakula"," fabric-chaincode-evm "," Swetha Repakula "," swetharepakula "," swetha "," srepaku@us.ibm.com
-sykesm,sykesm"," fabric-amcl fabric-ca fabric-lib-go fabric homebrew-fabric "," Matthew Sykes "," [sykesm,sykesm"," sykesm "," <sykesmat@us.ibm.com>
-takemiyamakoto,takemiyamakoto"," iroha "," Makoto Takemiya "," @takemiyamakoto "," takemiya@soramitsu.co.jp "," Product vision
-timbeiko,timbeiko"," besu "," Tim Beiko "," timbeiko "," timbeiko
-tmarkovski,tmarkovski"," sawtooth-sdk-dotnet "," Tomislav Markovski "," tmarkovski "," tomislav
-tongli,tongli"," cello "," Tong Li "," tongli "," tongli "," litong01@us.ibm.com
-troyronda,troyronda"," fabric-cli fabric-sdk-go "," Troy Ronda "," [troyronda](https://github.com/troyronda) "," troyronda "," <troy@troyronda.com>
-tyvision,tyvision"," iroha "," Anatoly Tyukushin "," @tyvision "," tyukushin@soramitsu.co.jp "," Ansible, Jenkins
-umadiraju,umadiraju"," blockchain-explorer "," Umapathi Madiraju "," umadiraju "," umadiraj "," umapathi.madiraju@gmail.com
-usmansaleem,usmansaleem"," besu "," Usman Saleem "," usmansaleem "," usmansaleem
-vaporos,vaporos"," education-sawtooth-simple-supply grid-contrib grid-rfcs grid-website grid sawtooth-ansible sawtooth-contrib sawtooth-core sawtooth-devmode sawtooth-marketplace sawtooth-pbft sawtooth-poet sawtooth-raft sawtooth-rfcs sawtooth-sabre sawtooth-sdk-cxx sawtooth-sdk-dotnet sawtooth-sdk-go sawtooth-sdk-java sawtooth-sdk-javascript sawtooth-sdk-python sawtooth-sdk-rust sawtooth-sdk-swift sawtooth-seth sawtooth-supply-chain sawtooth-website transact-contrib transact-rfcs transact-sdk-go transact-sdk-javascript transact "," Shawn Amundson "," vaporos "," amundson
-vchinoy-da,vchinoy-da"," blockchain-explorer "," Vinita Chinoy "," vchinoy-da "," vchinoy "," vinitachinoy@yahoo.com
-victordrobny,victordrobny"," iroha "," Victor Drobny "," @victordrobny "," drobny@soramitsu.co.jp "," Development
-x3medima17,x3medima17"," iroha "," Dumitru Savva "," @x3medima17 "," savva@soramitsu.co.jp "," Development
-xspeedcruiser,xspeedcruiser"," blockchain-explorer "," Satheesh Kathamuthu "," xspeedcruiser "," satheeshk "," satheesh.ceg@gmail.com
-yannoban,yannoban"," iroha "," Yanno Ban "," @yannoban "," ban.yanno@nbc.org.kh "," Development
-yeasy,yeasy"," cello-analytics cello fabric-sdk-py "," Baohua Yang "," yeasy "," baohua "," yangbaohua@gmail.com
-zhaochy1990,zhaochy1990"," fabric-chaincode-node fabric-sdk-node "," Chaoyi Zhao "," [zhaochy1990,zhaochy1990"," zhaochy "," <zhaochy_2015@hotmail.com>
