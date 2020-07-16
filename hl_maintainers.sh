@@ -98,20 +98,26 @@ mbaxter;;Meredith Baxter;;hyperledger/besu
 mbwhite;whitemat@uk.ibm.com;Matthew B White;;hyperledger/fabric
 muralisrini;srinivasan.muralidharan99@gmail.com;Srinivasan Muralidharan;muralisr;hyperledger/fabric
 muratovv;fyodor@soramitsu.co.jp;Fyodor Muratov;;hyperledger/iroha
+neewy;n.yushkevich@hotmail.com;Nikolai Iushkevich;;hyperledger/iroha
+nekia;atsushin@fast.au.fujitsu.com;Atsushi Neki;;hyperledger/explorer
+nfrunza;nfrunza@gmail.com;Nik Frunza;;hyperledger/explorer
+nickaleks;alekseev@soramitsu.co.jp;Nikita Alekseev;;hyperledger/iroha
+nikhil550;nikhilg550@gmail.com;Nikhil Gupta;nikhilgupta;hyperledger/fabric
+nklincoln;;Nick Lincoln;nkl199;hyperledger/caliper
+odowdaibm;a_o-dowd@uk.ibm.com;Anthony O'Dowd;;hyperledger/fabric
+pamandrejko;pama@ibm.com;Pam Andrejko;;hyperledger/fabric
+peterschwarz;;Peter Schwarz;pschwarz;hyperledger/sawtooth,hyperledger/grid,hyperledger/transact
+phymbert;pierrick.hymbert@gmail.com;Pierrick Hymbert;;hyperledger/burrow
+pinges;;Stefan Pingel;;hyperledger/besu
+rain-on;;Trent Mohay;trent.mohay;hyperledger/besu
+rberg2;;Richard Berg;;hyperledger/grid,hyperledger/sawtooth,hyperledger/transact
+rbuysse;;Ryan Beck-Buysse;;hyperledger/grid,hyperledger/sawtooth,hyperledger/transact
+rojotek;;Rob Dawson;RobDawson;hyperledger/besu
+ryanlassigbanks;;Ryan Banks;robinbanks;hyperledger/transact
+ryuo88;okada@soramitsu.co.jp;Ryu Okada;;hyperledger/iroha
 ;;;;hyperledger/
 ;;;;hyperledger/
 ;;;;hyperledger/
-;;;;hyperledger/
-;;;;hyperledger/
-;;;;hyperledger/
-;;;;hyperledger/
-;;;;hyperledger/
-;;;;hyperledger/
-;;;;hyperledger/
-;;;;hyperledger/
-;;;;hyperledger/
-;;;;hyperledger/
-
 
 EOM
 )
@@ -182,23 +188,6 @@ IFS=$OFS
 # curl -s -XPOST -H 'Content-type: application/json' '(...)/sds-hyperledger-*/_search?size=10000' -d'{"query":{"wildcard":{"origin":{"value":"*smart-contracts*"}}}}' | jq '.hits.hits[]._index' | sort | uniq
 # curl -s -XPOST -H 'Content-type: application/json' (...)/_sql?format=csv -d"{\"query\":\"select origin, project from \\\"sds-hyperledger-*\\\" where origin like '%smart%' group by origin, project\"}"
 exit 0
-neewy,neewy"," iroha "," Nikolai Iushkevich "," @neewy "," n.yushkevich@hotmail.com "," Development
-nekia,nekia"," blockchain-explorer "," Atsushi Neki "," nekia "," nekia "," atsushin@fast.au.fujitsu.com
-nfrunza,nfrunza"," blockchain-explorer "," Nik Frunza "," nfrunza "," nfrunza "," nfrunza@gmail.com
-nickaleks,nickaleks"," iroha "," Nikita Alekseev "," @nickaleks "," alekseev@soramitsu.co.jp "," Development
-nikhil550,nikhil550"," fabric-amcl fabric-ca fabric-samples fabric homebrew-fabric "," Nikhil Gupta "," [nikhil550,nikhil550"," nikhilgupta "," nikhilg550@gmail.com
-nklincoln,nklincoln"," caliper "," Nick Lincoln "," nklincoln "," nkl199
-odowdaibm,odowdaibm"," fabric-amcl fabric-ca fabric homebrew-fabric "," Anthony O\'Dowd "," [odowdaibm,odowdaibm"," odowdaibm "," <a_o-dowd@uk.ibm.com>
-pamandrejko,pamandrejko"," fabric-amcl fabric-ca fabric homebrew-fabric "," Pam Andrejko "," [pamandrejko,pamandrejko"," pandrejko "," <pama@ibm.com>
-peterschwarz,peterschwarz"," education-sawtooth-simple-supply grid-contrib grid-rfcs grid-website grid sawtooth-ansible sawtooth-contrib sawtooth-core sawtooth-devmode sawtooth-marketplace sawtooth-pbft sawtooth-poet sawtooth-raft sawtooth-rfcs sawtooth-sabre sawtooth-sdk-cxx sawtooth-sdk-dotnet sawtooth-sdk-go sawtooth-sdk-java sawtooth-sdk-javascript sawtooth-sdk-python sawtooth-sdk-rust sawtooth-sdk-swift sawtooth-seth sawtooth-supply-chain sawtooth-website transact-contrib transact-rfcs transact-sdk-go transact-sdk-javascript transact "," Peter Schwarz "," peterschwarz "," pschwarz
-phymbert,phymbert"," burrow "," Pierrick Hymbert "," phymbert "," <pierrick.hymbert@gmail.com>
-pinges,pinges"," besu "," Stefan Pingel "," pinges "," pinges
-rain-on,rain-on"," besu "," Trent Mohay "," rain-on "," trent.mohay
-rberg2,rberg2"," grid-contrib grid-website grid sawtooth-ansible sawtooth-contrib sawtooth-core sawtooth-devmode sawtooth-pbft sawtooth-poet sawtooth-raft sawtooth-sabre sawtooth-sdk-cxx sawtooth-sdk-dotnet sawtooth-sdk-go sawtooth-sdk-java sawtooth-sdk-javascript sawtooth-sdk-python sawtooth-sdk-rust sawtooth-website transact-contrib transact-sdk-go transact-sdk-javascript transact "," Richard Berg "," rberg2 "," rberg2
-rbuysse,rbuysse"," grid-contrib grid-website grid sawtooth-ansible sawtooth-contrib sawtooth-core sawtooth-devmode sawtooth-pbft sawtooth-poet sawtooth-raft sawtooth-sabre sawtooth-sdk-cxx sawtooth-sdk-dotnet sawtooth-sdk-go sawtooth-sdk-java sawtooth-sdk-javascript sawtooth-sdk-python sawtooth-sdk-rust sawtooth-supply-chain sawtooth-website transact-contrib transact-sdk-go transact-sdk-javascript transact "," Ryan Beck-Buysse "," rbuysse "," rbuysse
-rojotek,rojotek"," besu "," Rob Dawson "," rojotek "," RobDawson
-ryanlassigbanks,ryanlassigbanks"," transact-contrib transact-sdk-go transact-sdk-javascript transact "," Ryan Banks "," ryanlassigbanks "," robinbanks
-ryuo88,ryuo88"," iroha "," Ryu Okada "," @ryuo88 "," okada@soramitsu.co.jp "," Product vision
 saad-karim,saad-karim"," fabric-ca "," Saad Karim "," saad-karim "," skarim "," <skarim@us.ibm.com>
 scottz64,scottz64"," fabric-test "," Scott Zwierzynski "," scottz64 "," scottz "," scottz@us.ibm.com
 seanyoung,seanyoung"," burrow "," Sean Young "," seanyoung "," <sean@mess.org>
